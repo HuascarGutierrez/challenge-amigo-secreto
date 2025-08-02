@@ -19,12 +19,20 @@ const validateName = (name) => {
     return name == '' ? false : true; 
 }
 
+const clearInput = (inputID) => {
+    document.getElementById(inputID).value = '';
+}
+
 const agregarAmigo = () => {
     const inputName = document.getElementById('amigo').value;
     const isNameCorrect = validateName(inputName);
     
     if(isNameCorrect) {
-        //continue to agregar amigo
+        
+        friends.push(inputName)
+        console.log(friends)
+        clearInput('amigo')
+
     } else {
         alert('Por favor, inserte un nombre.')
     }

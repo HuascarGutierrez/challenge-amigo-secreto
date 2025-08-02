@@ -18,3 +18,14 @@ const validateName = (name) => {
     //it will tell us if its empty or not
     return name == '' ? false : true; 
 }
+
+const agregarAmigo = () => {
+    const inputName = document.getElementById('amigo').value;
+    const isNameCorrect = validateName(inputName);
+    
+    if(isNameCorrect) {
+        //continue to agregar amigo
+    } else {
+        alert('Por favor, inserte un nombre.')
+    }
+}

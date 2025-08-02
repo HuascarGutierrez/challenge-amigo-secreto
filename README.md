@@ -26,9 +26,13 @@ Desarrollar la lógica de un sistema que permita:
 
 📁 amigo-secreto/
 ├── index.html # Estructura HTML principal
+
 ├── style.css # Estilos del proyecto (no incluido aquí)
+
 ├── app.js # Lógica principal en JavaScript
+
 ├── assets/ # Imágenes utilizadas en la interfaz
+
 └── README.md # Este archivo
 
 

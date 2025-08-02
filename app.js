@@ -13,3 +13,8 @@
 //global variables
 
 let friends = []
+
+const validateName = (name) => {
+    //it will tell us if its empty or not
+    return name == '' ? false : true; 
+}

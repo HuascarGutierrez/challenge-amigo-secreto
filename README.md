@@ -25,6 +25,7 @@ Desarrollar la lógica de un sistema que permita:
 ## 📂 Estructura del proyecto
 
 📁 amigo-secreto/
+
 ├── index.html # Estructura HTML principal
 
 ├── style.css # Estilos del proyecto (no incluido aquí)

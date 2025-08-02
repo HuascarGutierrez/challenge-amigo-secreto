@@ -10,4 +10,7 @@ requirements:
  * randomSorteo: sortearAmigo button, select a random friend from the list.
 
 ## Declare and Initialize the list of friends
-`let friends = []`
+```let friends = [];
+const inputID = 'amigo';
+const listaAmigoID = 'listaAmigos';
+```

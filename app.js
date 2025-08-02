@@ -12,28 +12,56 @@
 
 //global variables
 
-let friends = []
+let friends = [];
+
+const inputID = 'amigo';
+const listaAmigoID = 'listaAmigos';
+
+//functions
 
 const validateName = (name) => {
     //it will tell us if its empty or not
     return name == '' ? false : true; 
 }
 
-const clearInput = (inputID) => {
-    document.getElementById(inputID).value = '';
+const clearInput = (id) => {
+    document.getElementById(id).value = '';
+}
+
+const updateList = (name) => {
+    // check if that name is already in list
+    if (friends.includes(name)) {
+        alert("Ese amigo ya esta en la lista");
+    } else {
+
+        //instead using for, I prefer to push it and also add it to the list, for better performance (even if it's minimum)
+        friends.push(name);
+        console.log(friends);
+        //console.log('continue')
+
+        const listOfFriends = document.getElementById(listaAmigoID);
+
+        const listItem = document.createElement("li");
+        listItem.textContent = name;
+
+        listOfFriends.appendChild(listItem);
+    }
+
 }
 
 const agregarAmigo = () => {
-    const inputName = document.getElementById('amigo').value;
+    const inputName = document.getElementById(inputID).value;
     const isNameCorrect = validateName(inputName);
     
     if(isNameCorrect) {
         
-        friends.push(inputName)
-        clearInput('amigo')
+        updateList(inputName);
+
+        clearInput(inputID);
         
 
     } else {
-        alert('Por favor, inserte un nombre.')
+        alert('Por favor, inserte un nombre.');
     }
 }
+

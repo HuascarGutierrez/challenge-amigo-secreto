@@ -30,8 +30,8 @@ const agregarAmigo = () => {
     if(isNameCorrect) {
         
         friends.push(inputName)
-        console.log(friends)
         clearInput('amigo')
+        
 
     } else {
         alert('Por favor, inserte un nombre.')

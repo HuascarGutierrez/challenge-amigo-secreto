@@ -79,5 +79,7 @@ Desarrollar la lógica de un sistema que permita:
 - Añadir animaciones al sorteo.
 - Guardar la lista en `localStorage`.
 
+## Proceso seguido con Figma
+![alt text](image-1.png)
 
 ¡Gracias por visitar este repositorio! Si te gustó el proyecto, no dudes en compartirlo o adaptarlo a tus necesidades.

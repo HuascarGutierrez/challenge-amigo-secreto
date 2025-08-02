@@ -16,6 +16,7 @@ let friends = [];
 
 const inputID = 'amigo';
 const listaAmigoID = 'listaAmigos';
+const resultadoID = 'resultado';
 
 //functions
 
@@ -28,6 +29,10 @@ const clearInput = (id) => {
     document.getElementById(id).value = '';
 }
 
+const isListEmpty = () => {
+    return friends.length === 0 ? true : false;
+}
+
 const updateList = (name) => {
     // check if that name is already in list
     if (friends.includes(name)) {
@@ -36,8 +41,6 @@ const updateList = (name) => {
 
         //instead using for, I prefer to push it and also add it to the list, for better performance (even if it's minimum)
         friends.push(name);
-        console.log(friends);
-        //console.log('continue')
 
         const listOfFriends = document.getElementById(listaAmigoID);
 
@@ -65,3 +68,19 @@ const agregarAmigo = () => {
     }
 }
 
+const sortearAmigo = () => {
+    if(isListEmpty()) {
+        alert('No hay amigos en tu lista, agrega un amigo')
+    
+    } else {
+        const randomIndex = Math.floor(Math.random() * friends.length);
+        const secretFriend = friends[randomIndex];
+
+        const result = document.getElementById(resultadoID);
+        
+        const resultFriend = document.createElement('li');
+        resultFriend.textContent = secretFriend;
+
+        result.replaceChildren(resultFriend)
+    }
+}
